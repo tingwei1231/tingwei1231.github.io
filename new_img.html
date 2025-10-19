@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嘴巴大考驗</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>【嘴巴大考驗】</h1>
+        <h3>請將下方標籤拖曳至對應的圖片下方</h3>
+
+        <div class="image-grid">
+            <div class="grid-item">
+                <img src="./image/mouth/1.jpg" alt="1">
+                <div class="drop-target" data-label="010"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/2.jpg" alt="2">
+                <div class="drop-target" data-label="陳映安"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/3.jpg" alt="3">
+                <div class="drop-target" data-label="許峻瑋"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/4.jpg" alt="4">
+                <div class="drop-target" data-label="陳思方"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/5.jpg" alt="5">
+                <div class="drop-target" data-label="相宜"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/6.jpg" alt="6">
+                <div class="drop-target" data-label="洪珈娸"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/7.jpg" alt="7">
+                <div class="drop-target" data-label="瑋哥"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/8.jpg" alt="8">
+                <div class="drop-target" data-label="波波絕"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/9.jpg" alt="9">
+                <div class="drop-target" data-label="張玉盈"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/10.jpg" alt="10">
+                <div class="drop-target" data-label="陳姿吟"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/11.jpg" alt="11">
+                <div class="drop-target" data-label="蔡珮怡"></div>
+            </div>
+            <div class="grid-item">
+                <img src="./image/mouth/12.jpg" alt="12">
+                <div class="drop-target" data-label="盧宥妤"></div>
+            </div>
+        </div>
+
+        <div class="labels-container">
+            <div class="drag-item" draggable="true" data-label="010">010</div>
+            <div class="drag-item" draggable="true" data-label="陳映安">陳映安</div>
+            <div class="drag-item" draggable="true" data-label="盧宥妤">盧宥妤</div>
+            <div class="drag-item" draggable="true" data-label="洪珈娸">洪珈娸</div>
+            <div class="drag-item" draggable="true" data-label="陳思方">陳思方</div>
+            <div class="drag-item" draggable="true" data-label="蔡珮怡">蔡珮怡</div>
+            <div class="drag-item" draggable="true" data-label="陳姿吟">陳姿吟</div>
+            <div class="drag-item" draggable="true" data-label="許峻瑋">許峻瑋</div>
+            <div class="drag-item" draggable="true" data-label="張玉盈">張玉盈</div>
+            <div class="drag-item" draggable="true" data-label="瑋哥">瑋哥</div>
+            <div class="drag-item" draggable="true" data-label="相宜">相宜</div>
+            <div class="drag-item" draggable="true" data-label="波波絕">波波絕</div>
+        </div>
+
+        <div class="button-container">
+            <button id="verifyBtn">驗證</button>
+            <button id="resetBtn">重設</button>
+        </div>
+        <p id="message"></p>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

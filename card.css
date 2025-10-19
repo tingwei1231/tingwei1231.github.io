@@ -1,0 +1,133 @@
+/* 設定整個頁面的基本樣式 */
+@font-face {
+    font-family: 'Chenyuluoyan'; /* 給這個字體取一個自定義的名稱 */
+    src: url('./fonts/ChenYuluoyan-2.0-Thin.ttf') format('truetype'); /* 替換成您的檔案路徑和格式 */
+    /* 建議也提供 .woff2 格式以獲得更好的瀏覽器支援和性能 */
+    /* 範例: src: url('./fonts/Chenyuluoyan-Thin-W01.woff2') format('woff2'); */
+    font-weight: normal;
+    font-style: bold;
+}
+
+body {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0;
+    background-color: #f0f8ff; 
+    
+    /* 關鍵修改: 將字體改為手寫字體 */
+    font-family: "Chenyuluoyan";
+    font-size: larger;
+}
+
+/* 卡片的基本樣式 */
+.birthday-card {
+    position: relative; 
+    width: 600px;
+    padding: 30px;
+    background-color: #eefcff; 
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    color: #333;
+    overflow: hidden; 
+    
+    /* 由於字體筆畫較粗獷，可以考慮調大字體大小 */
+    font-size: 1.2em; 
+    
+    animation: scale-in 1.5s ease-out forwards;
+}
+
+/* 卡片內文字樣式 */
+.birthday-card h1 {
+    color: #e91e63;
+    margin-bottom: 15px;
+    font-size: 2.5em; /* 標題可以再放大一點 */
+}
+
+.birthday-card p {
+    margin: 10px 0;
+    line-height: 1.8; /* 增加行距，讓手寫字體更清晰易讀 */
+}
+
+/* 圖片點綴樣式 (其餘不變) */
+/* ... (保留上一個回答的 .decoration 及其子類別樣式) ... */
+.decoration {
+    position: absolute; 
+    width: 50px;
+    height: auto;
+    z-index: 10;
+}
+
+.balloon {
+    top: -20px;
+    right: -20px;
+    width: 70px;
+    transform: rotate(15deg);
+}
+
+.confetti {
+    bottom: -15px;
+    left: 10px;
+    width: 60px;
+    transform: rotate(-5deg);
+}
+
+.cake {
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%) rotate(-10deg);
+    width: 80px;
+}
+
+/* 動畫關鍵影格 (不變) */
+@keyframes scale-in {
+    0% {
+        transform: scale(0); 
+        opacity: 0;
+    }
+    
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ======================================= */
+/* MEDIA QUERY：針對小螢幕（手機）進行優化 */
+/* ======================================= */
+@media (max-width: 480px) {
+    
+    /* 調整卡片內邊距，避免太靠近邊緣 */
+    .birthday-card {
+        padding: 20px;
+        font-size: 1em; /* 手機字體略微縮小 */
+    }
+    
+    /* 調整標題大小 */
+    .birthday-card h1 {
+        font-size: 2em;
+    }
+    
+    /* 縮小圖片裝飾，避免佔用太多空間 */
+    .decoration {
+        width: 40px; 
+    }
+    
+    .balloon {
+        top: -15px;
+        right: -15px;
+        width: 60px;
+    }
+    
+    .cake {
+        left: -20px;
+        width: 70px;
+    }
+}

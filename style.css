@@ -1,0 +1,111 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 550px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 auto 20px;
+}
+
+.grid-item {
+    position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.grid-item img {
+    width: 100%;
+    /* 確保圖片是正方形，讓九宮格更整齊 */
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    display: block;
+}
+
+.grid-item.selected {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 3em;
+    background-color: rgba(76, 175, 80, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.grid-item.selected .overlay {
+    opacity: 1;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+#verifyBtn {
+    background-color: #007BFF;
+    color: white;
+}
+
+#verifyBtn:hover {
+    background-color: #0056b3;
+}
+
+#resetBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+#resetBtn:hover {
+    background-color: #da190b;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}

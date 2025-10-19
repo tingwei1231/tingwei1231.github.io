@@ -1,0 +1,153 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 95%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    justify-content: space-between;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    display: block;
+}
+
+.drop-target {
+    width: 90%;
+    height: 35px;
+    margin-top: 10px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+    font-weight: bold;
+    transition: all 0.2s;
+    background-color: #f0f0f0;
+}
+
+.drop-target.hover {
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+}
+
+.drop-target.filled {
+    border-style: solid;
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+}
+
+.labels-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    height: 36px;
+}
+
+.drag-item {
+    padding: 8px 15px;
+    background-color: #da719c;
+    color: white;
+    border-radius: 20px;
+    cursor: grab;
+    font-size: 14px;
+    user-select: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.drag-item:active {
+    cursor: grabbing;
+    transform: scale(1.05);
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+#verifyBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#verifyBtn:hover {
+    background-color: #45a049;
+}
+
+#resetBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+#resetBtn:hover {
+    background-color: #da190b;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f44336;
+}
+.drop-target:empty::after {
+    content: "請放置標籤";
+    color: #999;
+    font-weight: normal;
+}
+
+.drop-target.filled::after {
+    content: "";
+}
