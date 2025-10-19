@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isCorrect) {
             alert('好強！不愧是聊天都在看嘴巴的人！即將跳轉...');
-            window.location.href = 'https://www.google.com';
+            window.location.href = 'https://tingwei1231.github.io/card.html';
         } else {
             message.textContent = '驗證失敗，請檢查標籤是否正確！(真的答不出來可以善用右鍵「檢視網頁原始碼」)';
         }
