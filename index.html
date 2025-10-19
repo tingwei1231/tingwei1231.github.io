@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>兩階段圖片驗證碼</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>歡迎光臨</div>
+
+    <div class="container">
+        <h1 id="stageTitle">兩階段驗證碼 - 準備開始</h1>
+
+        <div class="grid-container" id="imageGrid">
+            </div>
+
+        <div class="button-container">
+            <button id="verifyBtn">驗證 (階段 1 / 2)</button>
+            <button id="resetBtn">重設</button>
+        </div>
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
