@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 成功通過所有階段，跳轉頁面
                 alert('恭喜！驗證全部成功！即將跳轉...');
                 // 替換成你想要跳轉的網頁網址
-                window.location.href = 'https://www.google.com'; 
+                window.location.href = 'https://tingwei1231.github.io/new_img.html'; 
             }
         } else {
             message.textContent = '驗證失敗，請檢查選擇的圖片是否有誤！';
